@@ -6,8 +6,6 @@ const TopGenarations = async() => {
     
     const topPhotos = photos.slice(0, 8);
      
-  
-
 
     return (
          <div>
