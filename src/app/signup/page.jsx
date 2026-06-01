@@ -1,4 +1,5 @@
 "use client";
+import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import {
   Button,
@@ -10,11 +11,11 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export default function SignUpPage() {
 
-  const router = useRouter
+  const router = useRouter()
   
   const onSubmit = async (e) => {
     e.preventDefault();
