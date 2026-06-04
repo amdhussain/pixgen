@@ -29,6 +29,7 @@ const Navbar = () => {
         <li><Link href="/">Home</Link></li>
         <li><Link href="/all-photos">All Photos</Link></li>
         <li><Link href="/pricing">Pricing</Link></li>
+        <li><Link href="/profile">Profile</Link></li>
       </ul>
 
       <div className="flex gap-4">
@@ -42,12 +43,22 @@ const Navbar = () => {
         {user && (
           <div className="flex gap-3 items-center">
             {/* <Avatar src={user.image} name={user.name} /> */}
-             <Avatar>
+             {/* <Avatar>
         <Avatar.Image alt="John Doe"  src={user?.image} 
         referrerPolicy="no-referrer"
          />
         <Avatar.Fallback>JD</Avatar.Fallback>
-      </Avatar>
+      </Avatar> */}
+
+      <Avatar className="h-8 w-8 cursor-pointer">
+                    <Avatar.Image 
+                    alt="John Doe" 
+                     src={user?.image} 
+                    referrerPolicy="no-referrer"
+                     />
+                    <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+                  </Avatar>
+
             <Button onClick={handleSignOut} size="sm" color="danger">
               SignOut
             </Button>
