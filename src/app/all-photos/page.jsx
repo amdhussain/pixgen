@@ -1,3 +1,4 @@
+import Category from "@/components/Category";
 import PhotoCard from "@/components/PhotoCard";
 
 const AllPhotosPage = async () => {
@@ -8,6 +9,8 @@ const AllPhotosPage = async () => {
     return (
         <div>
              <h1 className="text-2xl font-bold m-4">All Photos</h1>
+             
+            <Category />
 
              <div className="grid grid-cols-4 gap-5">
                 {photos.map(photo => (
